@@ -1,24 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import { SkeletonTheme } from "react-loading-skeleton";
+import Home from "./components/Home";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SkeletonTheme baseColor="#202020" highlightColor="#444">
+      <div className="bg-[#161616] h-screen flex justify-center items-center">
+        <Home />
+      </div>
+    </SkeletonTheme>
   );
 }
 
